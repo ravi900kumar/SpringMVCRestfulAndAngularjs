@@ -1,0 +1,58 @@
+<h3>{{addproductsmessage}}</h3>
+<form ng-submit="addProduct(product)">
+
+	<table width="23%" align="center" border="2">
+		<tr>
+			<td>Photo</td>
+			<td><select ng-model="product.photo">
+					<option value="product1.jpeg">Product 1</option>
+					<option value="product2.jpeg">Product 2</option>
+					<option value="product3.jpeg">Product 3</option>
+					<option value="product4.jpeg">Product 4</option>
+					<option value="product5.jpeg">Product 5</option>
+					<option value="product6.jpeg">Product 6</option>
+					<option value="product7.jpeg">Product 7</option>
+					<option value="product8.jpeg">Product 8</option>
+					<option value="product9.jpeg">Product 9</option>
+					<option value="product10.jpeg">Product 10</option>
+
+
+			</select> <br> <img alt="" src="images/{{product.photo}}" height="200px"
+				width="200px"></td>
+		</tr>
+		<tr>
+			<td>Id</td>
+			<td><input type="number" ng-model="product.id"></td>
+		</tr>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" ng-model="product.name"></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td><input type="number" ng-model="product.price"></td>
+		</tr>
+		<tr>
+			<td>Quantity</td>
+			<td><input type="number" ng-model="product.quantity"></td>
+		</tr>
+		<tr>
+			<td>Description</td>
+			<td><textarea rows="8" cols="20" ng-model="product.description"></textarea>
+			</td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td>
+				<button type="submit">Save</button>
+			</td>
+		</tr>
+
+
+	</table>
+
+
+
+</form>
+

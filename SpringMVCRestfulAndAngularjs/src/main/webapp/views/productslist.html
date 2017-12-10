@@ -1,0 +1,38 @@
+<div align="center">
+	<h3>{{allproductsmessage}}</h3>
+	<br> Search option <select ng-model="search">
+		<option ng-repeat="product in allproductslist">{{
+			product.name }}</option>
+	</select> | Search <input type="text" ng-model="search"> {{message}}
+	<table border="2" align="center">
+
+		<tr>
+			<td>Product-ID</td>
+			<td>Product Name</td>
+			<td>Price</td>
+			<td>Quantity</td>
+			<td>Description</td>
+			<td>Options</td>
+
+		</tr>
+
+
+		<tr ng-repeat="product in allproductslist | filter:search">
+			<td>{{ product.id }}</td>
+			<td>{{ product.name }}</td>
+			<td>{{ product.price }}</td>
+			<td>{{ product.quantity }}</td>
+			<td>{{ product.description }}</td>
+
+
+
+			<td><a href="#/productdetails/{{product.id}}">Details</a> | <a
+				href="#/productedit/{{product.id}}">Edit</a> | <a
+				href="#/productdelete/{{product.id}}">Delete</a></td>
+		</tr>
+
+
+	</table>
+
+
+</div>
